@@ -14,7 +14,7 @@ router.get("/", function(req,res){
         res.render("index", hdbrsObj);
     });
 
-router.post("/api/burgers", function (req,res){
+router.post("/api/burgers/create", function (req,res){
     burger.insertOne(
         ["burger_name", "devoured"],
         [req.body.burger_name, req.body.devoured],
